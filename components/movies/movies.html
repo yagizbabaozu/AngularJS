@@ -1,0 +1,51 @@
+<div class="b-example-divider">
+  <div class="container">
+    <div
+      class="
+        d-flex
+        flex-wrap
+        align-items-center
+        justify-content-center justify-content-lg-start
+      "
+    >
+      <ul
+        class="
+          nav
+          col-12 col-lg-auto
+          me-lg-auto
+          mb-2
+          justify-content-center
+          mb-md-0
+        "
+      >
+        <li>
+          <a style="font-size: large" class="nav-link px-2 text-secondary"
+            >Popular Movies</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container mx-auto mt-4" ng-controller="getData">
+  <div class="row">
+    <div
+      ng-repeat="entry in entries | filter:{programType:'movie'}"
+      class="col-md-3"
+    >
+      <div class="card" style="width: 18rem">
+        <img
+          ng-src="{{entry.images['Poster Art'].url}}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{entry.title}}</h5>
+          <p>{{entry.programType}}</p>
+          <h6 class="card-subtitle mb-2 text-muted">{{entry.releaseYear}}</h6>
+          <p class="card-text">{{entry.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

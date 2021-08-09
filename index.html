@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <script src="assets/js/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.1/examples/navbars/"
+    />
+
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="config.js"></script>
+  </head>
+  <body ng-app="mainApp">
+    <header-comp></header-comp>
+
+    <!-- <content-comp></content-comp> -->
+    <div ng-view></div>
+    <!-- <div ng-include="'components/content/content.html'"></div> -->
+
+    <footer-comp></footer-comp>
+  </body>
+</html>
