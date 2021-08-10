@@ -8,7 +8,8 @@ app.controller("getSeries", function ($scope, $http, $timeout) {
     }).then(
       function (response) {
         let selectSeries = [];
-        for (i = 0; i < response.data.total; i++) {
+        // Limit 21
+        for (i = 0; i < /* response.data.total */ 21; i++) {
           if (response.data.entries[i].programType == "series") {
             selectSeries.push(response.data.entries[i]);
           }

@@ -30,7 +30,7 @@
 <div class="container mx-auto mt-4" ng-controller="getData">
   <div class="row">
     <div
-      ng-repeat="entry in entries | filter:{programType:'movie'}"
+      ng-repeat="entry in releaseYear2010 | filter:{programType:'movie'} | orderBy: 'releaseYear'"
       class="col-auto"
     >
       <div class="card" style="width: 18rem">
