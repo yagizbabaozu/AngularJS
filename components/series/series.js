@@ -1,5 +1,6 @@
 app.controller("getSeries", function ($scope, $http, $timeout) {
   $scope.loading = true;
+  $scope.spinner = true;
   $scope.content = "Loading...";
   $timeout(function () {
     $http({
@@ -18,6 +19,7 @@ app.controller("getSeries", function ($scope, $http, $timeout) {
         $scope.loading = false;
       },
       function (response) {
+        $scope.spinner = false;
         $scope.content = "Oops, something went wrong...";
       }
     );

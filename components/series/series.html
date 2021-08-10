@@ -29,7 +29,14 @@
 </div>
 <div class="container mx-auto mt-4" ng-controller="getSeries">
   <div class="row">
-    <p ng-show="loading">{{content}}</p>
+    <div class="col" ng-show="loading">
+      <div class="d-inline" ng-show="spinner">
+        <div class="spinner-border spinner-border-sm" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+      <div class="d-inline">{{content}}</div>
+    </div>
     <div ng-hide="loading" ng-repeat="entry in entries" class="col-auto">
       <div class="card" style="width: 18rem">
         <img
