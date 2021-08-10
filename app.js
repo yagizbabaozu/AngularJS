@@ -43,3 +43,9 @@ app.controller("getData", function ($scope, $http) {
     $scope.loading = false;
   });
 });
+
+app.controller("jqueryExample", function ($scope) {
+  $("#clickToHide").click(function () {
+    $(this).hide();
+  });
+});
