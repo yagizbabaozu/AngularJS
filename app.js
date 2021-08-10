@@ -18,21 +18,6 @@ app.component("homeComp", {
   templateUrl: "components/home/home.html",
 });
 
-/* function getMovies($scope, $http) {
-  $http({
-    method: "GET",
-    url: "assets/data/sample.json",
-  }).then(function (response) {
-    let selectMovies = [];
-    for (i = 0; i < response.data.total; i++) {
-      if (response.data.entries[i].programType != "series") {
-        selectMovies.push(response.data.entries[i]);
-      }
-    }
-    $scope.entries = selectMovies;
-  });
-} */
-
 app.controller("loadingScreen", function ($scope, $timeout) {
   $scope.loading = true;
   $scope.content = "Loading...";
