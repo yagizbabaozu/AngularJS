@@ -59,3 +59,9 @@
 .dropdown-toggle {
   outline: 0;
 }
+
+@media only screen and (max-width: 991px) {
+  #search-input {
+    display: none;
+  }
+}
